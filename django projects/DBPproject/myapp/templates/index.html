@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body style="background-color: rgb(21, 180, 188);">
+    <center><h1>Welcome to Database Project</h1></center>
+    <hr>
+    <center><h2>{{msg}}</h2></center>
+    <hr>
+    <form method="post">
+        {% csrf_token %} 
+        <input name="name" type="text" placeholder="Name"><br><br>
+        <input name="email" type="email" placeholder="Email"><br><br>
+        <input name="dob" type="date"><br><br>
+        <input name="mobile" type="number" placeholder="Mobile"><br><br>
+        <textarea name="address" placeholder="Address"></textarea><br><br>
+        <input type="submit" value="Insert">
+    </form>
+    <hr>
+    <a href="/showdata">Showdata</a>
+</body>
+</html>
